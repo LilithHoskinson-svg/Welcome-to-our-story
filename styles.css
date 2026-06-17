@@ -1,0 +1,35 @@
+/* styles.css - romantic, playful styles */
+:root{
+  --bg:#fff7f9;
+  --accent:#ff8fab;
+  --muted:#666;
+  --card:#fff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#fff7f9 0%, #fff 60%); color:#222}
+.hero{display:flex;align-items:center;justify-content:space-between;padding:36px;background:linear-gradient(90deg,#fff4f7,#fff7f4);border-bottom:1px solid #ffdfe9}
+.hero-inner{max-width:65%}
+.hero h1{font-size:2rem;margin:0;color:#b43b6c}
+.subtitle{margin:6px 0;color:var(--muted)}
+.countdown{margin-top:10px;font-weight:600;color:#333}
+.cta{margin-top:12px}
+.btn{background:var(--accent);border:none;color:#fff;padding:8px 12px;border-radius:10px;margin-right:8px;cursor:pointer}
+.btn:hover{filter:brightness(.95)}
+.toucan-wrap{padding-right:28px}
+.container{max-width:980px;margin:28px auto;padding:0 18px}
+.card{background:var(--card);padding:18px;border-radius:12px;margin-bottom:18px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.open-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.open-btn{padding:12px;border-radius:10px;border:1px dashed #ffd3e0;background:transparent;cursor:pointer}
+.timeline-list{list-style:none;padding:0;margin:0}
+.timeline-list li{padding:12px 0;border-bottom:1px solid #f3e6ea}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.gallery-item{height:160px;object-fit:cover;border-radius:8px;cursor:pointer}
+.meme-area{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.meme-frame{min-height:120px;width:100%;background:#f8f8ff;border-radius:8px;padding:8px;display:flex;align-items:center;justify-content:center}
+.muted{color:var(--muted)}
+.footer{padding:18px;text-align:center;color:#999}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center}
+.modal-inner{background:#fff;padding:18px;border-radius:10px;max-width:720px;width:92%;position:relative}
+.close{position:absolute;right:10px;top:8px;border:none;background:transparent;font-size:22px}
+.hidden{display:none}
+@media(min-width:800px){.hero h1{font-size:2.6rem}}

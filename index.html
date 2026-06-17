@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Welcome to Our Story</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>For Mario — a little corner of the internet</h1>
+      <p class="subtitle">Open this when you need a smile 💕</p>
+      <div class="countdown" id="countdown">Loading countdown...</div>
+      <div class="cta">
+        <button id="surpriseBtn" class="btn">Surprise me</button>
+        <button id="openWhenBtn" class="btn">Open When...</button>
+      </div>
+    </div>
+    <div class="toucan-wrap">
+      <!-- Cute toucan illustration (inline SVG) -->
+      <svg width="140" height="140" viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1">
+            <stop offset="0" stop-color="#ffb347"/>
+            <stop offset="1" stop-color="#ffcc33"/>
+          </linearGradient>
+        </defs>
+        <circle cx="100" cy="100" r="98" fill="#fef6f3" stroke="#ffd1dc" stroke-width="2" />
+        <g transform="translate(30,18)">
+          <ellipse cx="70" cy="68" rx="36" ry="38" fill="#111" />
+          <circle cx="58" cy="58" r="8" fill="#fff" />
+          <path d="M16 78 C40 30, 120 20, 108 82" fill="url(#g1)" stroke="#ff7a7a" stroke-width="2" />
+        </g>
+      </svg>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="open-when" class="card hidden">
+      <h2>Open when...</h2>
+      <div class="open-grid">
+        <button class="open-btn" data-key="sad">...you're sad</button>
+        <button class="open-btn" data-key="thinking">...you're thinking of me</button>
+        <button class="open-btn" data-key="mad">...you're mad</button>
+        <button class="open-btn" data-key="bored">...you're bored</button>
+        <button class="open-btn" data-key="celebrate">...it's a celebration</button>
+        <button class="open-btn" data-key="miss">...you miss me</button>
+      </div>
+    </section>
+
+    <section id="timeline" class="card">
+      <h2>Our timeline</h2>
+      <ol class="timeline-list">
+        <li>
+          <time>October 18</time>
+          <strong>We started dating 💘</strong>
+          <p>Our anniversary — I'll always remember this day.</p>
+        </li>
+        <li>
+          <time>Memories</time>
+          <strong>First fair, first prizes</strong>
+          <p>Lots of stuffed animals and laughter.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="gallery" class="card">
+      <h2>Photo gallery</h2>
+      <p class="muted">Add your photos to /assets/images and they'll appear here.</p>
+      <div id="galleryGrid" class="gallery-grid">
+        <!-- photos will be injected here -->
+      </div>
+    </section>
+
+    <section id="memes" class="card">
+      <h2>"This is us" memes</h2>
+      <p>Some silly Gen Z-style memes and short clips. Replace links with your favorites.</p>
+      <div id="memeArea" class="meme-area">
+        <button id="randomMeme" class="btn">Show me a meme</button>
+        <div id="memeFrame" class="meme-frame"></div>
+      </div>
+    </section>
+
+    <section id="notes" class="card">
+      <h2>Love letter</h2>
+      <p id="loveText">Hi Mario — this website is just for you. If you're reading this, that means you found the little corner of the internet I made just for you. I love you. — Lil</p>
+    </section>
+  </main>
+
+  <!-- Lightbox / modals -->
+  <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-inner">
+      <button id="closeModal" class="close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <small>Made with ♥ — surprise site. Deploy with GitHub Pages when ready.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
