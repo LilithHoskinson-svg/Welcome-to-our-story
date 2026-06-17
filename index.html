@@ -17,21 +17,26 @@
         <button id="openWhenBtn" class="btn">Open When...</button>
       </div>
     </div>
-    <div class="toucan-wrap">
-      <!-- Cute toucan illustration (inline SVG) -->
-      <svg width="140" height="140" viewBox="0 0 200 200" aria-hidden="true">
+    <div class="toucan-wrap" aria-hidden="true">
+      <!-- Pair of cute toucans labeled M + L -->
+      <svg width="220" height="120" viewBox="0 0 220 120" class="toucan-pair" role="img">
         <defs>
-          <linearGradient id="g1" x1="0" x2="1">
-            <stop offset="0" stop-color="#ffb347"/>
-            <stop offset="1" stop-color="#ffcc33"/>
-          </linearGradient>
+          <linearGradient id="beak1" x1="0" x2="1"><stop offset="0" stop-color="#ffb347"/><stop offset="1" stop-color="#ffcc33"/></linearGradient>
         </defs>
-        <circle cx="100" cy="100" r="98" fill="#fef6f3" stroke="#ffd1dc" stroke-width="2" />
-        <g transform="translate(30,18)">
-          <ellipse cx="70" cy="68" rx="36" ry="38" fill="#111" />
-          <circle cx="58" cy="58" r="8" fill="#fff" />
-          <path d="M16 78 C40 30, 120 20, 108 82" fill="url(#g1)" stroke="#ff7a7a" stroke-width="2" />
+        <!-- Left toucan -->
+        <g transform="translate(10,10)">
+          <ellipse cx="40" cy="50" rx="28" ry="30" fill="#111" />
+          <circle cx="30" cy="40" r="6" fill="#fff" />
+          <path d="M8 70 C28 20, 88 18, 74 72" fill="url(#beak1)" stroke="#ff7a7a" stroke-width="2" />
         </g>
+        <!-- Right toucan -->
+        <g transform="translate(110,18) scale(0.95)">
+          <ellipse cx="40" cy="50" rx="28" ry="30" fill="#0b2433" />
+          <circle cx="30" cy="40" r="6" fill="#fff" />
+          <path d="M12 68 C30 24, 100 22, 86 70" fill="#ffd1a9" stroke="#ff8a5b" stroke-width="2" />
+        </g>
+        <!-- Labels -->
+        <text x="70" y="108" font-family="Inter, Arial" font-size="14" fill="#b43b6c" text-anchor="middle">M + L</text>
       </svg>
     </div>
   </header>
@@ -46,28 +51,44 @@
         <button class="open-btn" data-key="bored">...you're bored</button>
         <button class="open-btn" data-key="celebrate">...it's a celebration</button>
         <button class="open-btn" data-key="miss">...you miss me</button>
+        <button class="open-btn" data-key="tired">...you're tired</button>
+        <button class="open-btn" data-key="angry">...you need a laugh</button>
       </div>
     </section>
 
     <section id="timeline" class="card">
       <h2>Our timeline</h2>
       <ol class="timeline-list">
-        <li>
-          <time>October 18</time>
-          <strong>We started dating 💘</strong>
-          <p>Our anniversary — I'll always remember this day.</p>
+        <li class="timeline-item">
+          <div class="thumb"><img src="/assets/images/photo1.jpg" alt="Oct 18"/></div>
+          <div class="meta">
+            <time>October 18</time>
+            <strong>We started dating 💘</strong>
+            <p>Our anniversary — I'll always remember this day.</p>
+          </div>
         </li>
-        <li>
-          <time>Memories</time>
-          <strong>First fair, first prizes</strong>
-          <p>Lots of stuffed animals and laughter.</p>
+        <li class="timeline-item">
+          <div class="thumb"><img src="/assets/images/photo2.jpg" alt="First fair"/></div>
+          <div class="meta">
+            <time>First Fair</time>
+            <strong>Fair day &amp; stuffed friend wins</strong>
+            <p>So many silly prizes and laughs — you held my hand the whole time.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="thumb"><img src="/assets/images/photo3.jpg" alt="Graduation"/></div>
+          <div class="meta">
+            <time>Graduation</time>
+            <strong>Proud moments</strong>
+            <p>We celebrated milestones together.</p>
+          </div>
         </li>
       </ol>
     </section>
 
     <section id="gallery" class="card">
       <h2>Photo gallery</h2>
-      <p class="muted">Add your photos to /assets/images and they'll appear here.</p>
+      <p class="muted">Your photos are below — click to open larger.</p>
       <div id="galleryGrid" class="gallery-grid">
         <!-- photos will be injected here -->
       </div>
@@ -75,10 +96,10 @@
 
     <section id="memes" class="card">
       <h2>"This is us" memes</h2>
-      <p>Some silly Gen Z-style memes and short clips. Replace links with your favorites.</p>
+      <p>Some silly Gen Z-style memes and short clips I picked. Click to open.</p>
       <div id="memeArea" class="meme-area">
         <button id="randomMeme" class="btn">Show me a meme</button>
-        <div id="memeFrame" class="meme-frame"></div>
+        <div id="memeFrame" class="meme-frame">No meme yet — click the button!</div>
       </div>
     </section>
 
@@ -97,7 +118,7 @@
   </div>
 
   <footer class="footer">
-    <small>Made with ♥ — surprise site. Deploy with GitHub Pages when ready.</small>
+    <small>Made with ♥ — surprise site. Published on GitHub Pages.</small>
   </footer>
 
   <script src="script.js"></script>

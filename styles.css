@@ -4,10 +4,11 @@
   --accent:#ff8fab;
   --muted:#666;
   --card:#fff;
+  --accent-2:#ffd1dc;
 }
 *{box-sizing:border-box}
 body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#fff7f9 0%, #fff 60%); color:#222}
-.hero{display:flex;align-items:center;justify-content:space-between;padding:36px;background:linear-gradient(90deg,#fff4f7,#fff7f4);border-bottom:1px solid #ffdfe9}
+.hero{display:flex;align-items:center;justify-content:space-between;padding:36px;background:linear-gradient(90deg,#fff4f7,#fff7f4);border-bottom:1px solid var(--accent-2)}
 .hero-inner{max-width:65%}
 .hero h1{font-size:2rem;margin:0;color:#b43b6c}
 .subtitle{margin:6px 0;color:var(--muted)}
@@ -21,9 +22,15 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 .open-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
 .open-btn{padding:12px;border-radius:10px;border:1px dashed #ffd3e0;background:transparent;cursor:pointer}
 .timeline-list{list-style:none;padding:0;margin:0}
-.timeline-list li{padding:12px 0;border-bottom:1px solid #f3e6ea}
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
-.gallery-item{height:160px;object-fit:cover;border-radius:8px;cursor:pointer}
+.timeline-item{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #f3e6ea;transition:transform .18s ease, box-shadow .18s ease}
+.timeline-item:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(180,59,108,.08)}
+.timeline-item .thumb{width:110px;height:70px;flex:0 0 110px;overflow:hidden;border-radius:8px}
+.timeline-item .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.timeline-item:hover .thumb img{transform:scale(1.12) rotate(-1deg)}
+.timeline-item .meta time{display:block;color:var(--muted);font-size:13px}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.gallery-item{height:160px;object-fit:cover;border-radius:8px;cursor:pointer;transition:transform .18s ease, box-shadow .18s ease}
+.gallery-item:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(0,0,0,.08)}
 .meme-area{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
 .meme-frame{min-height:120px;width:100%;background:#f8f8ff;border-radius:8px;padding:8px;display:flex;align-items:center;justify-content:center}
 .muted{color:var(--muted)}
